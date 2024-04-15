@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -16,8 +17,18 @@ public class EnemyMovement : MonoBehaviour
     private bool waiting = false;
     private float waitTimer = 0f;
 
+    NavMeshAgent agent;
+
+    private void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
+
     void Update()
     {
+
         if (player != null && Vector3.Distance(transform.position, player.position) <= chaseRange)
         {
             Chase();
@@ -30,43 +41,37 @@ public class EnemyMovement : MonoBehaviour
 
     void Patrol()
     {
-        // Check if there are patrol points
         if (patrolPoints.Length > 1 && !waiting)
         {
-            // Calculate direction to move
-            Vector3 direction = (patrolPoints[currentPatrolIndex].position - transform.position).normalized;
+            agent.SetDestination(patrolPoints[currentPatrolIndex].position);
 
-            // Move towards the current patrol point
-            transform.Translate(direction * moveSpeed * Time.deltaTime);
-
-            // Check if the enemy reached the current patrol point
-            if (Vector3.Distance(transform.position, patrolPoints[currentPatrolIndex].position) < 0.1f)
+            if (agent.remainingDistance < 0.1f)
             {
-                // Change direction if reached the current point
-                if (movingForward)
-                {
-                    currentPatrolIndex++;
-                    if (currentPatrolIndex >= patrolPoints.Length)
-                    {
-                        currentPatrolIndex = patrolPoints.Length - 2;
-                        movingForward = false;
-                    }
-                }
-                else
-                {
-                    currentPatrolIndex--;
-                    if (currentPatrolIndex < 0)
-                    {
-                        currentPatrolIndex = 1;
-                        movingForward = true;
-                    }
-                }
-
-                // Start waiting if shouldWaitAtPatrolPoints is true
                 if (shouldWaitAtPatrolPoints)
                 {
                     waiting = true;
+                    movingForward = false;
                     waitTimer = waitTime;
+                }
+                else
+                {
+                    // Change direction if reached the current point
+                    if (movingForward && !waiting)
+                    {
+                        currentPatrolIndex++;
+                        if (currentPatrolIndex >= patrolPoints.Length)
+                        {
+                            currentPatrolIndex = 0; // Reset to the beginning
+                        }
+                    }
+                    else
+                    {
+                        currentPatrolIndex--;
+                        if (currentPatrolIndex < 0)
+                        {
+                            currentPatrolIndex = patrolPoints.Length - 1; // Set to the last point
+                        }
+                    }
                 }
             }
         }
@@ -77,17 +82,14 @@ public class EnemyMovement : MonoBehaviour
             if (waitTimer <= 0f)
             {
                 waiting = false;
+                movingForward = true;
             }
         }
     }
 
     void Chase()
     {
-        // Calculate direction to move towards the player
-        Vector3 direction = (player.position - transform.position).normalized;
-
-        // Move towards the player
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+        agent.SetDestination(player.position);
     }
 
     void OnDrawGizmosSelected()
