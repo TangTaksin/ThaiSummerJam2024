@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 33be7668106fb0444aca12d523687c6b
+guid: f1086f6d9a521e141a97760e17441b37
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -9,8 +9,7 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
-  errors:
-  - Invalid rectangle (Tile ID ='182') in tileset 'TerrainTile' has zero width
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -18,7 +17,7 @@ ScriptedImporter:
   importerVersion: 13
   pixelsPerUnit: 32
   edgesPerEllipse: 32
-  numberOfObjectsImported: 1011
+  numberOfObjectsImported: 525
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048

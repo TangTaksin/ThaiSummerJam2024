@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5885727192572745266}
   - component: {fileID: 3128903517891270141}
   - component: {fileID: 2558338838765756314}
+  - component: {fileID: 7854094880931249541}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 1436984033
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 993873520, guid: dc4f7d19bc4b32145b2b7f04caafa520, type: 3}
   m_Color: {r: 1, g: 0.4584905, b: 0.4584905, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,15 +103,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 512
+  trigger: 8
   condition:
     luaConditions: []
     questConditions:
-    - questName: KillEnemyBlock
+    - questName: BlockPath
       questState: 2
-      checkQuestEntry: 1
-      entryNumber: 1
-      questEntryState: 2
+      checkQuestEntry: 0
+      entryNumber: 0
+      questEntryState: 0
     acceptedTags:
     - Player
     acceptedGameObjects: []
@@ -125,10 +126,7 @@ MonoBehaviour:
   setAnotherQuestEntryState: 0
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
-  luaCode: 'Variable["enemydie"] = true;
-
-    Variable["enemyToKilled.NumCollected"]
-    = Variable["enemyToKilled.NumCollected"] + 1'
+  luaCode: Variable["enemydie"] = true
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -177,19 +175,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2558338838765756314}
-        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.IncrementOnDestroy,
-          Assembly-CSharp-firstpass
-        m_MethodName: TryIncrement
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -276,8 +261,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolPoints:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   player: {fileID: 0}
   moveSpeed: 4
   chaseRange: 5
@@ -321,8 +304,8 @@ MonoBehaviour:
   variable: enemyToKilled
   increment: 1
   min: 0
-  max: 3
-  alertMessage: '[var=enemyToKilled]/3 '
+  max: 1
+  alertMessage: 
   alertDuration: 0
   condition:
     luaConditions: []
@@ -339,3 +322,24 @@ MonoBehaviour:
   onIncrement:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &7854094880931249541
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093732653331380985}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a59405faa2cc671418fb448cda80e3f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

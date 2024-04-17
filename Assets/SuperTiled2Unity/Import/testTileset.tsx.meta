@@ -9,7 +9,9 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
-  errors: []
+  errors:
+  - Invalid rectangle (Tile ID ='164') in tileset 'testTileset' has zero width
+  - Invalid rectangle (Tile ID ='218') in tileset 'testTileset' has zero width
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -17,7 +19,7 @@ ScriptedImporter:
   importerVersion: 13
   pixelsPerUnit: 32
   edgesPerEllipse: 32
-  numberOfObjectsImported: 143
+  numberOfObjectsImported: 543
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048
