@@ -189,7 +189,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name
-      value: Find the apples
+      value: "\u0E40\u0E01\u0E47\u0E1A\u0E40\u0E1B\u0E23\u0E39\u0E40\u0E27\u0E35\u0E22\u0E19\u0E41\u0E2D\u0E1B\u0E40\u0E1B\u0E34\u0E49\u0E255\u0E2D\u0E31\u0E19"
       type: 0
       typeString: 
     - title: Trackable
@@ -209,7 +209,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: '[var=Apple.NumCollected]/3'
+      value: "[var=Apple.NumCollected]/5 \u0E2D\u0E31\u0E19"
       type: 0
       typeString: 
   - id: 2
@@ -243,7 +243,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Display Name
-      value: "\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E21\u0E2D\u0E19\u0E40\u0E15\u0E2D\u0E23\u0E4C"
+      value: "\u0E0A\u0E48\u0E27\u0E22\u0E13\u0E23\u0E07\u0E04\u0E4C\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\"\u0E40\u0E1E\u0E25\u0E34\u0E07\""
       type: 0
       typeString: 
     - title: Trackable
@@ -263,7 +263,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: '[var=enemydie]'
+      value: '[var=enemydieyet]'
       type: 0
       typeString: 
   - id: 3
@@ -430,6 +430,20 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 6
+    fields:
+    - title: Name
+      value: enemydieyet
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: "\u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E40\u0E2A\u0E23\u0E47\u0E08"
+      type: 0
+      typeString: CustomFieldType_Text
     - title: Description
       value: 
       type: 0
@@ -768,7 +782,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 480
-        y: 744
+        y: 816
         width: 160
         height: 30
     - id: 5
@@ -898,7 +912,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E42\u0E2D\u0E49\u0E1C\u0E25\u0E01\u0E23\u0E30\u0E1A\u0E2D\u0E07\u0E40\u0E1E\u0E23\u0E0A
+        value: "\u0E42\u0E2D\u0E49\u0E40\u0E1B\u0E23\u0E39\u0E40\u0E27\u0E35\u0E22\u0E19\u0E41\u0E2D\u0E1B\u0E40\u0E1B\u0E34\u0E49\u0E25
           \u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E21\u0E32\u0E01 \u0E19\u0E32\u0E01\u0E19\u0E35\u0E49\u0E40\u0E01\u0E48\u0E07\u0E08\u0E23\u0E34\u0E07\u0E46"
         type: 0
         typeString: 
@@ -1124,7 +1138,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E42\u0E14\u0E22\u0E44\u0E1B\u0E40\u0E01\u0E47\u0E1A\u0E1C\u0E25\u0E01\u0E23\u0E30\u0E1A\u0E2D\u0E07\u0E40\u0E1E\u0E23\u0E0A\u0E21\u0E32\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19
+        value: "\u0E42\u0E14\u0E22\u0E44\u0E1B\u0E40\u0E01\u0E47\u0E1A\u0E41\u0E2D\u0E1B\u0E40\u0E1B\u0E34\u0E49\u0E25\u0E17\u0E30\u0E40\u0E25\u0E17\u0E23\u0E32\u0E22\u0E21\u0E32\u0E43\u0E2B\u0E49\u0E09\u0E31\u0E19\u0E2B\u0E19\u0E48\u0E2D\u0E22
           \u0E41\u0E15\u0E48\u0E17\u0E35\u0E48\u0E19\u0E31\u0E49\u0E19\u0E21\u0E31\u0E19\u0E40\u0E15\u0E47\u0E21\u0E44\u0E1B\u0E14\u0E49\u0E27\u0E22\u0E1E\u0E27\u0E01\u0E40\u0E1E\u0E25\u0E34\u0E07"
         type: 0
         typeString: 
@@ -1143,7 +1157,7 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 11
         destinationConversationID: 3
-        destinationDialogueID: 4
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1153,7 +1167,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 480
+        x: 504
         y: 672
         width: 160
         height: 30
@@ -1426,8 +1440,63 @@ MonoBehaviour:
         y: 960
         width: 160
         height: 30
+    - id: 17
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E23\u0E30\u0E27\u0E31\u0E07\u0E15\u0E31\u0E27\u0E14\u0E49\u0E27\u0E22\u0E25\u0E48\u0E30"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 17
+        destinationConversationID: 3
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 480
+        y: 744
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 204.14467, y: 246.01474}
+    canvasScrollPosition: {x: 210.01619, y: 283.44595}
     canvasZoom: 1.0899999
   - id: 4
     fields:
@@ -1565,8 +1634,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u0E15\u0E37\u0E48\u0E19\u0E41\u0E25\u0E49\u0E27\u0E2B\u0E23\u0E2D?
-          \u0E17\u0E33\u0E44\u0E21\u0E15\u0E31\u0E27\u0E19\u0E32\u0E22\u0E21\u0E35\u0E17\u0E31\u0E49\u0E07\u0E44\u0E1F\u0E41\u0E25\u0E30\u0E19\u0E49\u0E33\u0E41\u0E02\u0E47\u0E07\u0E2D\u0E22\u0E39\u0E48\u0E23\u0E27\u0E21\u0E01\u0E31\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E23\u0E48\u0E32\u0E07\u0E40\u0E14\u0E35\u0E22\u0E27\n\n"
+        value: "\u0E15\u0E37\u0E48\u0E19\u0E41\u0E25\u0E49\u0E27\u0E07\u0E31\u0E49\u0E19\u0E2B\u0E23\u0E2D?
+          \u0E43\u0E08\u0E40\u0E22\u0E47\u0E19\u0E46\u0E09\u0E31\u0E19\u0E44\u0E21\u0E48\u0E17\u0E33\u0E25\u0E32\u0E22\u0E19\u0E32\u0E22\u0E2B\u0E23\u0E2D\u0E01
+          \u0E09\u0E31\u0E19\u0E0A\u0E37\u0E48\u0E2D\u0E13\u0E23\u0E07\u0E04\u0E4C
+          \u0E41\u0E25\u0E49\u0E27\u0E19\u0E32\u0E22\u0E25\u0E48\u0E30\u0E0A\u0E37\u0E48\u0E2D\u0E2D\u0E30\u0E44\u0E23?"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1586,7 +1657,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 1
         destinationConversationID: 4
-        destinationDialogueID: 8
+        destinationDialogueID: 15
         isConnector: 0
         priority: 2
       conditionsString: CurrentQuestState("BlockPath") == "unassigned"
@@ -1623,7 +1694,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E21\u0E32\u0E22\u0E31\u0E31\u0E07\u0E44\u0E1B\u0E40\u0E23\u0E47\u0E27\u0E46\u0E14\u0E34\u0E49"
+        value: "\u0E1E\u0E27\u0E01\u0E21\u0E31\u0E19\u0E44\u0E1B\u0E01\u0E31\u0E19\u0E2B\u0E23\u0E37\u0E2D\u0E22\u0E31\u0E07"
         type: 0
         typeString: 
       - title: Sequence
@@ -1706,8 +1777,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1080
-        y: 384
+        x: 1248
+        y: 336
         width: 160
         height: 30
     - id: 4
@@ -1733,7 +1804,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E08\u0E31\u0E14\u0E44\u0E1B\u0E25\u0E38\u0E07"
+        value: "\u0E44\u0E14\u0E49\u0E14\u0E34\u0E2A\u0E1A\u0E32\u0E22\u0E44\u0E01\u0E48"
         type: 0
         typeString: 
       - title: Sequence
@@ -1757,16 +1828,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'SetQuestState("BlockPath", "active");
-
-        ShowAlert("New")'
+      userScript: SetQuestState("BlockPath", "active");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 624
-        y: 792
+        x: 408
+        y: 1152
         width: 160
         height: 30
     - id: 5
@@ -1792,7 +1861,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E40\u0E40\u0E25\u0E49\u0E27"
+        value: "\u0E40\u0E2A\u0E23\u0E47\u0E08\u0E41\u0E25\u0E49\u0E27"
         type: 0
         typeString: 
       - title: Sequence
@@ -1847,7 +1916,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E44\u0E1B\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E43\u0E2B\u0E49"
+        value: "\u0E22\u0E31\u0E07\u0E2D\u0E22\u0E39\u0E48\u0E40\u0E14\u0E35\u0E4B\u0E22\u0E27\u0E01\u0E33\u0E25\u0E31\u0E07\u0E44\u0E1B\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23"
         type: 0
         typeString: 
       - title: Sequence
@@ -1896,7 +1965,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E44\u0E1B\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E17\u0E35\u0E48\u0E40\u0E21\u0E37\u0E2D\u0E07\u0E02\u0E49\u0E32\u0E07\u0E2B\u0E19\u0E49\u0E32"
+        value: "\u0E02\u0E2D\u0E1A\u0E04\u0E38\u0E13\u0E21\u0E32\u0E01\u0E40\u0E25\u0E22
+          \u0E44\u0E1B\u0E40\u0E08\u0E2D\u0E01\u0E31\u0E19\u0E17\u0E35\u0E48\u0E2B\u0E21\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E49\u0E32\u0E07\u0E2B\u0E19\u0E49\u0E32\u0E19\u0E30"
         type: 0
         typeString: 
       - title: Sequence
@@ -1951,8 +2021,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E44\u0E21\u0E48\u0E40\u0E04\u0E22\u0E40\u0E2B\u0E47\u0E19\u0E2D\u0E30\u0E44\u0E23\u0E41\u0E1A\u0E1A\u0E19\u0E35\u0E49\u0E21\u0E32\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E25\u0E22
-          \u0E1B\u0E01\u0E15\u0E34\u0E18\u0E32\u0E15\u0E38\u0E19\u0E49\u0E33\u0E41\u0E02\u0E47\u0E07\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E32\u0E22\u0E04\u0E27\u0E23\u0E25\u0E30\u0E25\u0E32\u0E22\u0E44\u0E1B\u0E01\u0E48\u0E2D\u0E19\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E49\u0E2B\u0E23\u0E2D"
+        value: "\u0E1B\u0E01\u0E15\u0E34\u0E18\u0E32\u0E15\u0E38\u0E19\u0E49\u0E33\u0E41\u0E02\u0E47\u0E07\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E32\u0E22\u0E42\u0E14\u0E19\u0E04\u0E27\u0E32\u0E21\u0E23\u0E49\u0E2D\u0E19\u0E40\u0E02\u0E49\u0E32\u0E44\u0E1B100\u0E2D\u0E07\u0E28\u0E32
+          \u0E04\u0E27\u0E23\u0E25\u0E30\u0E25\u0E32\u0E22\u0E44\u0E1B\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E19\u0E40\u0E25\u0E22\u0E41\u0E17\u0E49\u0E46"
         type: 0
         typeString: 
       - title: Sequence
@@ -1976,7 +2046,7 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 8
         destinationConversationID: 4
-        destinationDialogueID: 9
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2014,8 +2084,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "\u0E09\u0E31\u0E19\u0E44\u0E21\u0E48\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E21\u0E07\u0E32\u0E19\u0E1E\u0E27\u0E01\u0E19\u0E31\u0E49\u0E19\u0E2B\u0E23\u0E2D\u0E01\u0E19\u0E30
-          \u0E04\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E1D\u0E31\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32
-          \u0E41\u0E15\u0E48"
+          \u0E04\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E1D\u0E31\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32"
         type: 0
         typeString: 
       - title: Sequence
@@ -2045,8 +2114,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 624
-        y: 552
+        x: 408
+        y: 912
         width: 160
         height: 30
     - id: 10
@@ -2072,7 +2141,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01\u0E04\u0E19\u0E17\u0E35\u0E48\u0E0A\u0E37\u0E48\u0E2D\u0E2A\u0E38\u0E40\u0E21\u0E08
+        value: "\u0E41\u0E15\u0E48\u0E09\u0E31\u0E19\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01\u0E04\u0E19\u0E17\u0E35\u0E48\u0E0A\u0E37\u0E48\u0E2D\u0E2A\u0E38\u0E40\u0E21\u0E08
           \u0E0A\u0E2D\u0E1A\u0E1E\u0E39\u0E14\u0E16\u0E36\u0E07\u0E04\u0E11\u0E32\u0E19\u0E49\u0E33\u0E41\u0E02\u0E47\u0E07\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E35\u0E48\u0E2B\u0E21\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E19\u0E02\u0E2D\u0E07\u0E09\u0E31\u0E19
           \u0E02\u0E36\u0E49\u0E19\u0E44\u0E1B\u0E17\u0E32\u0E07\u0E40\u0E2B\u0E19\u0E37\u0E2D
           \u0E19\u0E48\u0E32\u0E08\u0E30\u0E1A\u0E2D\u0E01\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E17\u0E35\u0E48\u0E19\u0E32\u0E22\u0E2D\u0E22\u0E32\u0E01\u0E23\u0E39\u0E49\u0E44\u0E14\u0E49"
@@ -2105,8 +2174,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 624
-        y: 648
+        x: 408
+        y: 1008
         width: 160
         height: 30
     - id: 11
@@ -2133,8 +2202,8 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "\u0E41\u0E15\u0E48\u0E1B\u0E31\u0E0D\u0E2B\u0E32\u0E04\u0E37\u0E2D\u0E21\u0E31\u0E19\u0E21\u0E35\u0E40\u0E08\u0E49\u0E32\u0E1E\u0E27\u0E01
-          '\u0E40\u0E1E\u0E25\u0E34\u0E07' \u0E02\u0E27\u0E32\u0E07\u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07\u0E40\u0E02\u0E49\u0E32\u0E2B\u0E21\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E19
-          \u0E19\u0E32\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E01\u0E31\u0E1A\u0E1E\u0E27\u0E01\u0E21\u0E31\u0E19\u0E44\u0E14\u0E49\u0E21\u0E31\u0E49\u0E22?"
+          '\u0E40\u0E1E\u0E25\u0E34\u0E07' \u0E02\u0E31\u0E14\u0E02\u0E27\u0E32\u0E07\u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07\u0E40\u0E02\u0E49\u0E32\u0E2B\u0E21\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E19\u0E2D\u0E22\u0E39\u0E48
+          \u0E19\u0E32\u0E22\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E0A\u0E48\u0E27\u0E22\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E01\u0E31\u0E1A\u0E1E\u0E27\u0E01\u0E21\u0E31\u0E19\u0E44\u0E14\u0E49\u0E21\u0E31\u0E49\u0E22?"
         type: 0
         typeString: 
       - title: Sequence
@@ -2157,6 +2226,12 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
+      - originConversationID: 4
+        originDialogueID: 11
+        destinationConversationID: 4
+        destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -2164,8 +2239,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 624
-        y: 720
+        x: 408
+        y: 1080
         width: 160
         height: 30
     - id: 12
@@ -2216,8 +2291,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 624
-        y: 864
+        x: 408
+        y: 1248
         width: 160
         height: 30
     - id: 13
@@ -2338,9 +2413,586 @@ MonoBehaviour:
         y: 672
         width: 160
         height: 30
+    - id: 15
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\"\u0E1F\u0E23\u0E2D\u0E2A\u0E15\"\u0E4C \u0E42\u0E2D\u0E49\u0E40\u0E1B\u0E47\u0E19\u0E0A\u0E37\u0E48\u0E2D\u0E17\u0E35\u0E48\u0E14\u0E35\u0E19\u0E34
+          \u0E1E\u0E2D\u0E14\u0E34\u0E09\u0E31\u0E19\u0E01\u0E33\u0E25\u0E31\u0E07\u0E08\u0E30\u0E01\u0E31\u0E1A\u0E1A\u0E49\u0E32\u0E19\u0E41\u0E25\u0E49\u0E27\u0E40\u0E2B\u0E47\u0E19\u0E19\u0E32\u0E22\u0E19\u0E2D\u0E19\u0E15\u0E31\u0E27\u0E15\u0E34\u0E14\u0E44\u0E1F\u0E2D\u0E22\u0E39\u0E48"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay({{end}});
+
+          SetContinueMode(true)'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 15
+        destinationConversationID: 4
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 360
+        y: 384
+        width: 160
+        height: 30
+    - id: 16
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E04\u0E34\u0E14\u0E27\u0E48\u0E32\u0E40\u0E1B\u0E47\u0E19\u0E28\u0E1E\u0E44\u0E1B\u0E0B\u0E30\u0E25\u0E30
+          \u0E41\u0E15\u0E48\u0E19\u0E48\u0E32\u0E41\u0E1B\u0E25\u0E01\u0E17\u0E33\u0E44\u0E21\u0E23\u0E48\u0E32\u0E07\u0E01\u0E32\u0E22\u0E19\u0E32\u0E22\u0E42\u0E14\u0E19\u0E40\u0E1C\u0E32\u0E02\u0E19\u0E32\u0E14\u0E19\u0E31\u0E49\u0E19\u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E2D\u0E30\u0E44\u0E23"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay({{end}});
+
+          SetContinueMode(true)'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 16
+        destinationConversationID: 4
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 360
+        y: 456
+        width: 160
+        height: 30
+    - id: 17
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E02\u0E19\u0E32\u0E14\u0E09\u0E31\u0E19\u0E04\u0E19\u0E18\u0E23\u0E23\u0E21\u0E14\u0E32\u0E17\u0E35\u0E48\u0E1B\u0E23\u0E31\u0E1A\u0E15\u0E31\u0E27\u0E19\u0E34\u0E14\u0E2B\u0E19\u0E48\u0E2D\u0E22
+          \u0E22\u0E31\u0E07\u0E40\u0E2D\u0E32\u0E15\u0E31\u0E27\u0E44\u0E21\u0E48\u0E23\u0E2D\u0E14"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay({{end}});
+
+          SetContinueMode(true)'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 17
+        destinationConversationID: 4
+        destinationDialogueID: 19
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 408
+        y: 528
+        width: 160
+        height: 30
+    - id: 18
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E09\u0E31\u0E19\u0E01\u0E33\u0E25\u0E31\u0E07\u0E15\u0E32\u0E21\u0E2B\u0E32\u0E04\u0E11\u0E32\u0E19\u0E49\u0E33\u0E41\u0E02\u0E47\u0E07"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 18
+        destinationConversationID: 4
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 408
+        y: 672
+        width: 160
+        height: 30
+    - id: 19
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E40\u0E40\u0E25\u0E49\u0E27\u0E19\u0E32\u0E22\u0E21\u0E32\u0E17\u0E33\u0E2D\u0E30\u0E44\u0E23\u0E41\u0E16\u0E27\u0E19\u0E35\u0E49"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay({{end}});
+
+          SetContinueMode(true)'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 19
+        destinationConversationID: 4
+        destinationDialogueID: 20
+        isConnector: 0
+        priority: 2
+      - originConversationID: 4
+        originDialogueID: 19
+        destinationConversationID: 4
+        destinationDialogueID: 18
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 408
+        y: 600
+        width: 160
+        height: 30
+    - id: 20
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E44\u0E21\u0E48\u0E1A\u0E2D\u0E01\u0E40\u0E02\u0E34\u0E25"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 20
+        destinationConversationID: 4
+        destinationDialogueID: 21
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 192
+        y: 648
+        width: 160
+        height: 30
+    - id: 21
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E40\u0E02\u0E34\u0E25
+          \u0E09\u0E31\u0E19\u0E44\u0E21\u0E48\u0E1A\u0E2D\u0E01\u0E43\u0E04\u0E23\u0E41\u0E19\u0E48\u0E19\u0E2D\u0E19"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay({{end}});
+
+          SetContinueMode(true)'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 21
+        destinationConversationID: 4
+        destinationDialogueID: 18
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 192
+        y: 720
+        width: 160
+        height: 30
+    - id: 22
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E19\u0E32\u0E22\u0E01\u0E33\u0E25\u0E31\u0E07\u0E15\u0E32\u0E21\u0E2B\u0E32\u0E04\u0E11\u0E32\u0E19\u0E49\u0E33\u0E41\u0E02\u0E47\u0E07\u0E2D\u0E22\u0E39\u0E48\u0E07\u0E31\u0E49\u0E19\u0E2B\u0E23\u0E2D?
+          \u0E2D\u0E35\u0E01\u0E04\u0E19\u0E41\u0E25\u0E49\u0E27\u0E2B\u0E23\u0E2D\u0E17\u0E35\u0E48\u0E1E\u0E39\u0E14\u0E16\u0E36\u0E07\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E19\u0E35\u0E49"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay({{end}});
+
+          SetContinueMode(true)'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 22
+        destinationConversationID: 4
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 408
+        y: 744
+        width: 160
+        height: 30
+    - id: 23
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E44\u0E2D\u0E49\u0E02\u0E2D\u0E07\u0E17\u0E35\u0E48\u0E21\u0E31\u0E19\u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E17\u0E33\u0E43\u0E2B\u0E49\u0E42\u0E25\u0E01\u0E40\u0E22\u0E47\u0E19\u0E25\u0E07\u0E41\u0E25\u0E30\u0E04\u0E37\u0E19\u0E04\u0E27\u0E32\u0E21\u0E2A\u0E21\u0E14\u0E38\u0E25\u0E43\u0E2B\u0E49\u0E01\u0E31\u0E1A\u0E42\u0E25\u0E01\u0E2D\u0E30\u0E19\u0E30"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay({{end}});
+
+          SetContinueMode(true)'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 23
+        destinationConversationID: 4
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 408
+        y: 818
+        width: 160
+        height: 30
+    - id: 24
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "\u0E08\u0E30\u0E25\u0E2D\u0E07\u0E14\u0E39"
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Fade();
+
+          SetActive(Enemies,true);'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 24
+        destinationConversationID: 4
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: SetQuestState("BlockPath", "active");
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 624
+        y: 1152
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 415.68054, y: 334.50616}
-    canvasZoom: 1.0600002
+    canvasScrollPosition: {x: 157.95752, y: 148.10878}
+    canvasZoom: 0.91000026
   - id: 5
     fields:
     - title: Title

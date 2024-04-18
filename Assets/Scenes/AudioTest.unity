@@ -187,7 +187,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3019608, g: 0.36862746, b: 0.36078432, a: 0}
+  m_BackGroundColor: {r: 0.5294118, g: 0.22352941, b: 0.1764706, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -978,7 +978,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a468802b4a4c874cac40c3c6befe26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: AudioTest
+  sceneName: AudioTest
+  fadeScreen: {fileID: 0}
 --- !u!1 &613156944
 GameObject:
   m_ObjectHideFlags: 0
