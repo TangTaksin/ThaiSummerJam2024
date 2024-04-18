@@ -10,28 +10,28 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource uiSource;
 
     [Header("Audio Clips")]
-    [SerializeField] private AudioClip[] bgmClips;
-    [SerializeField] private AudioClip[] footstepSounds;
-    [SerializeField] private AudioClip startCombat;
-    [SerializeField] private AudioClip hitSound;
-    [SerializeField] private AudioClip deathSound;
+    [SerializeField] public AudioClip[] bgmClips;
+    [SerializeField] public AudioClip[] footstepSounds;
+    [SerializeField] public AudioClip startCombat;
+    [SerializeField] public AudioClip hitSound;
+    [SerializeField] public AudioClip deathSound;
 
     [Header("Audio Clips Attack")]
-    [SerializeField] private AudioClip sfx_NormalAttack;
-    [SerializeField] private AudioClip sfx_FireAttack;
-    [SerializeField] private AudioClip sfx_IceAttack;
-    [SerializeField] private AudioClip sfx_WaterAttack;
+    [SerializeField] public AudioClip sfx_NormalAttack;
+    [SerializeField] public AudioClip sfx_FireAttack;
+    [SerializeField] public AudioClip sfx_IceAttack;
+    [SerializeField] public AudioClip sfx_WaterAttack;
 
     [Header("Audio Clips Combine")]
-    [SerializeField] private AudioClip sfx_Combine_FireWater;
-    [SerializeField] private AudioClip sfx_Combine_IceWater;
-    [SerializeField] private AudioClip sfx_Combine_FireIce;
+    [SerializeField] public AudioClip sfx_Combine_FireWater;
+    [SerializeField] public AudioClip sfx_Combine_IceWater;
+    [SerializeField] public AudioClip sfx_Combine_FireIce;
 
     [Header("Audio Clips UI")]
-    [SerializeField] private AudioClip SFX_UI_Select;
-    [SerializeField] private AudioClip SFX_UI_Confirm;
-    [SerializeField] private AudioClip SFX_UI_Cancel;
-    [SerializeField] private AudioClip SFX_UI_Error;
+    [SerializeField] public AudioClip SFX_UI_Select;
+    [SerializeField] public AudioClip SFX_UI_Confirm;
+    [SerializeField] public AudioClip SFX_UI_Cancel;
+    [SerializeField] public AudioClip SFX_UI_Error;
 
 
 
