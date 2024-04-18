@@ -12,6 +12,8 @@ ScriptedImporter:
   errors:
   - Errors detected in tileset 'TerrainTile.tsx'. Check the tileset inspector for
     more details. Your map may be broken until these are fixed.
+  - Errors detected in tileset 'testTileset.tsx'. Check the tileset inspector for
+    more details. Your map may be broken until these are fixed.
   warnings: []
   missingSortingLayers: []
   missingLayers: []
