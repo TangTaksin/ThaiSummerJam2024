@@ -21,6 +21,15 @@ public class MainMenuManager : MonoBehaviour
         overlayScene = SceneManager.GetSceneByName(SceneName);
     }
 
+    public void UnloadSettingsScene()
+    {
+        if (SceneManager.GetSceneByName(SceneName).isLoaded)
+        { 
+            SceneManager.UnloadSceneAsync(SceneName);
+        }
+
+    }
+
     public void UnloadSceneGame()
     {
         if (overlayScene.IsValid())
@@ -28,7 +37,6 @@ public class MainMenuManager : MonoBehaviour
             SceneManager.UnloadSceneAsync(overlayScene);
             overlayScene = default;
         }
-
     }
 
     public void QuitGame()
