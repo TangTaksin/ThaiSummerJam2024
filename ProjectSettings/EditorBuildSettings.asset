@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 4ac04d36999490549a18e64f8abd6c09
   - enabled: 1
     path: Assets/Scenes/MeltWorld.unity
     guid: 4c5192417926ff74c8cad56687ffc5f8
+  - enabled: 1
+    path: Assets/Scenes/AudioTest.unity
+    guid: 1df3cb51d5d97f5498f5c0501b97fce7
   m_configObjects: {}
