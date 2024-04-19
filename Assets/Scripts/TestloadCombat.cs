@@ -22,6 +22,5 @@ public class TestloadCombat : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         LoadGame();
-
     }
 }
