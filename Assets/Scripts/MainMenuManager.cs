@@ -2,6 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
+using PixelCrushers;
+using PixelCrushers.DialogueSystem;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -89,4 +92,89 @@ public class MainMenuManager : MonoBehaviour
         Application.Quit();
 #endif
     }
+
+
+    public void SaveGame()
+    {
+        
+        var saveSystem = GameObjectUtility.FindFirstObjectByType<SaveSystem>();
+        if (saveSystem != null)
+        {
+            SaveSystem.SaveToSlot(1);
+        }
+        else
+        {
+            string saveData = PersistentDataManager.GetSaveData();
+            PlayerPrefs.SetString("SavedGame", saveData);
+            Debug.Log("Save Game Data: " + saveData);
+        }
+        DialogueManager.ShowAlert("Game saved.");
+    }
+
+    public void LoadDataGame()
+    {
+        ToggleTimeScale();
+        PersistentDataManager.LevelWillBeUnloaded();
+        var saveSystem = GameObjectUtility.FindFirstObjectByType<SaveSystem>();
+        if (saveSystem != null)
+        {
+            if (SaveSystem.HasSavedGameInSlot(1))
+            {
+                SaveSystem.LoadFromSlot(1);
+                DialogueManager.ShowAlert("Game loaded.");
+            }
+            else
+            {
+                DialogueManager.ShowAlert("Save a game first.");
+            }
+        }
+        else
+        {
+            if (PlayerPrefs.HasKey("SavedGame"))
+            {
+                string saveData = PlayerPrefs.GetString("SavedGame");
+                Debug.Log("Load Game Data: " + saveData);
+                LevelManager levelManager = GameObjectUtility.FindFirstObjectByType<LevelManager>();
+                if (levelManager != null)
+                {
+                    levelManager.LoadGame(saveData);
+                }
+                else
+                {
+                    PersistentDataManager.ApplySaveData(saveData);
+                    DialogueManager.SendUpdateTracker();
+                }
+                DialogueManager.ShowAlert("Game loaded.");
+            }
+            else
+            {
+                DialogueManager.ShowAlert("Save a game first.");
+            }
+        }
+    }
+
+
+    public void ClearSavedGame()
+    {
+        var saveSystem = GameObjectUtility.FindFirstObjectByType<SaveSystem>();
+        if (saveSystem != null)
+        {
+            if (SaveSystem.HasSavedGameInSlot(1))
+            {
+                SaveSystem.DeleteSavedGameInSlot(1);
+            }
+        }
+        else if (PlayerPrefs.HasKey("SavedGame"))
+        {
+            PlayerPrefs.DeleteKey("SavedGame");
+            Debug.Log("Cleared saved game data");
+        }
+        DialogueManager.ShowAlert("Saved Game Cleared");
+    }
+
+    private void ToggleTimeScale()
+    {
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+    }
+
 }

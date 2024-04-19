@@ -614,8 +614,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 600
+        x: 384
+        y: 672
         width: 160
         height: 30
     - id: 2
@@ -773,16 +773,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SetQuestState("Apple", "active");
-
-        ShowAlert("New quset")'
+      userScript: SetQuestState("Apple", "active");
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 816
+        x: 384
+        y: 888
         width: 160
         height: 30
     - id: 5
@@ -996,8 +994,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 504
-        y: 360
+        x: 384
+        y: 432
         width: 160
         height: 30
     - id: 9
@@ -1054,8 +1052,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 432
+        x: 384
+        y: 504
         width: 160
         height: 30
     - id: 10
@@ -1111,8 +1109,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 528
+        x: 384
+        y: 600
         width: 160
         height: 30
     - id: 11
@@ -1167,8 +1165,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 504
-        y: 672
+        x: 384
+        y: 744
         width: 160
         height: 30
     - id: 12
@@ -1491,13 +1489,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 480
-        y: 744
+        x: 384
+        y: 816
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 210.01619, y: 283.44595}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 0, y: 352.11273}
+    canvasZoom: 0.79000014
   - id: 4
     fields:
     - title: Title
@@ -2328,11 +2326,11 @@ MonoBehaviour:
 
           WaitForMessage();
 
-          SetActive(NPC,false);
-
           SetContinueMode(false);
 
-          SetActive(BlockPath,false)'
+          SetActive(BlockPath,false);
+
+          SetActive(NPC,false)'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -2991,8 +2989,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 157.95752, y: 148.10878}
-    canvasZoom: 0.91000026
+    canvasScrollPosition: {x: 1.0526733, y: 144.82248}
+    canvasZoom: 0.7600004
   - id: 5
     fields:
     - title: Title
@@ -3977,7 +3975,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 235.4719, y: 70.943405}
+    canvasScrollPosition: {x: 13.5850525, y: 0}
     canvasZoom: 1.06
   - id: 6
     fields:

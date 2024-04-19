@@ -33,8 +33,10 @@ public class VolumeSettings : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+
             isSettingPanelActive = !isSettingPanelActive;
             settingPanel.SetActive(isSettingPanelActive);
+            Time.timeScale = Time.timeScale == 0 ? 1 : 0;
         }
     }
 
