@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44651ea7ea5821a48a58aabc6bf08e77, type: 3}
+  m_Name: bartz
+  m_EditorClassIdentifier: 
+  charName: Bartz
+  level: 1
+  exp: 0
+  sdPerLevel: 5
+  expCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 9.99
+      outSlope: 9.99
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 100
+      value: 1000
+      inSlope: 9.99
+      outSlope: 9.99
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  elements: 04000000
+  baseHealth: 50
+  baseMeltingPoint: 150
+  curhealth: 44
+  curMeltingPoint: 0
+  baseVitality: 5
+  baseAttack: 5
+  baseDefence: 5
+  baseAgility: 2
+  baseLuck: 5
+  addedVitality: 0
+  addedAttack: 0
+  addedDefence: 0
+  addedAgility: 0
+  addedLuck: 0
+  vitality: 5
+  attack: 5
+  defence: 5
+  agility: 2
+  luck: 5
+  enemyTendancy: 0
+  initSkillList:
+  - {fileID: 11400000, guid: a9076407acd4a584aaca1b430c994496, type: 2}
+  - {fileID: 11400000, guid: 27de311a04afd6645955efae58b26e40, type: 2}
+  - {fileID: 11400000, guid: b21b74634dab9ac4d867829d0e782aaf, type: 2}
+  - {fileID: 11400000, guid: 9ffb4c05f8ebe974e9cce953e701f1cf, type: 2}
+  portraits: {fileID: -1443002702, guid: c1a8bc86b07dcd94892c5564b1836560, type: 3}
+  animationSet: {fileID: 9100000, guid: d4ecbf9d5ee89c34f999e5dfd7eeef76, type: 2}
+  flipSprite: 1

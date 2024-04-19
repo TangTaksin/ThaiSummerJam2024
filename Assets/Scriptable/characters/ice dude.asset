@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44651ea7ea5821a48a58aabc6bf08e77, type: 3}
+  m_Name: ice dude
+  m_EditorClassIdentifier: 
+  charName: Ice Dude
+  level: 1
+  exp: 0
+  sdPerLevel: 5
+  expCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  elements: 03000000
+  baseHealth: 20
+  baseMeltingPoint: 0
+  curhealth: 0
+  curMeltingPoint: 0
+  baseVitality: 0
+  baseAttack: 0
+  baseDefence: 0
+  baseAgility: 0
+  baseLuck: 0
+  addedVitality: 0
+  addedAttack: 0
+  addedDefence: 0
+  addedAgility: 0
+  addedLuck: 0
+  vitality: 5
+  attack: 2
+  defence: 10
+  agility: 2
+  luck: 2
+  enemyTendancy: 0
+  initSkillList:
+  - {fileID: 11400000, guid: 27de311a04afd6645955efae58b26e40, type: 2}
+  portraits: {fileID: 0}
+  animationSet: {fileID: 0}
+  flipSprite: 0
