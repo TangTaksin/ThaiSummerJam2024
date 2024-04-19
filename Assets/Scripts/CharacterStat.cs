@@ -116,6 +116,8 @@ public class CharacterStat : ScriptableObject
 
     public void SetOrder(int order)
     {
+        if (order < 1)
+            order = 1;
         currentOrder = order;
     } 
 

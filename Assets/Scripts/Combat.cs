@@ -38,9 +38,11 @@ public class Combat : MonoBehaviour
     [SerializeField] GameObject playerChoicePanel, firstSelectMain, firstSelectSkill, firstSelectTarget;
     [SerializeField] GameObject SkillPanel, skillAnContainer;
     [SerializeField] TextMeshProUGUI infoText;
-    [SerializeField] GameObject VictoryScreen, DeafeatedScreen;
+    [SerializeField] VictoryScreen VictoryScreen;
+    [SerializeField] GameObject DeafeatedScreen;
 
     [Header("Info")]
+    [SerializeField] BattleInfo battleInfo;
     [SerializeField] CharStatusUI[] playerStatus;
     [SerializeField] CharStatusUI[] enemyStatus;
     [SerializeField] SkillUI[] skillSlot;
@@ -53,7 +55,7 @@ public class Combat : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] Button[] MainOptions;
 
-    public delegate void CombatEvent(Party player, Party enemy, string lastScene);
+    public delegate void CombatEvent(Party player, Party enemy);
     public static CombatEvent OnCombat;
 
     public delegate void TargetEvent(CombatChar targetChar);
@@ -68,11 +70,10 @@ public class Combat : MonoBehaviour
         CombatChar.OnDown += OnDown;
 
         _playerInput = GetComponent<PlayerInput>();
-        playerChoicePanel.SetActive(false);
+        playerChoicePanel?.SetActive(false);
 
 
-        //Debug Start
-        InitializeBattle(playerSide, enemySide, "lmao");
+        InitializeBattle(battleInfo.playerParty, battleInfo.enemyParty);
     }
 
     private void OnDisable()
@@ -85,7 +86,7 @@ public class Combat : MonoBehaviour
     {
         //print(EventSystem.current.currentSelectedGameObject);
 
-        var cgo = EventSystem.current.currentSelectedGameObject;
+        var cgo = EventSystem.current?.currentSelectedGameObject;
 
         if (_pointer)
         {
@@ -159,11 +160,10 @@ public class Combat : MonoBehaviour
 
     }
 
-    private void InitializeBattle(Party player, Party enemy, string lastscene)
+    private void InitializeBattle(Party player, Party enemy)
     {
 
-        lastSceneBeforeFight = lastscene;
-        //SceneManager.LoadSceneAsync("battle");
+        lastSceneBeforeFight = battleInfo.sceneName ; // scene
 
         storedExp = 0;
 
@@ -364,6 +364,7 @@ public class Combat : MonoBehaviour
 
     void PlayerSelectedTarget(CombatChar target)
     {
+        EnableTarget(false);
         timeline.SetPreview(false, 1);
         selectedChar = target;
 
@@ -425,7 +426,7 @@ public class Combat : MonoBehaviour
         var sp = selectedSkill.Power;
         // get target defence
         var def = selectedChar.GetStat().defence;
-
+        
         //deal damage
         float dmg = ((sp + atk) - def);
         print("before modi : " + dmg);
@@ -516,17 +517,22 @@ public class Combat : MonoBehaviour
         {
             // display lose screen
             DeafeatedScreen.SetActive(true);
+
+            return;
         }
 
         if (enemyLose)
         {
             // display win screen
-            VictoryScreen.SetActive(true);
+            VictoryScreen.gameObject.SetActive(true);
+            VictoryScreen.DistributeExp(playerSide, storedExp);
+
+            return;
         }
     }
 
     public void ReturnToOverWorld()
     {
-
+        SceneManager.LoadScene(lastSceneBeforeFight);
     }
 }

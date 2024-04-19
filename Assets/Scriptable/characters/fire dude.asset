@@ -41,11 +41,11 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   elements: 00000000
-  baseHealth: 990
+  baseHealth: 50
   baseMeltingPoint: 200
-  curhealth: 990
-  curMeltingPoint: 0
-  baseVitality: 99
+  curhealth: 0
+  curMeltingPoint: 200
+  baseVitality: 5
   baseAttack: 1
   baseDefence: 10
   baseAgility: 3
@@ -55,7 +55,7 @@ MonoBehaviour:
   addedDefence: 0
   addedAgility: 0
   addedLuck: 0
-  vitality: 99
+  vitality: 5
   attack: 1
   defence: 10
   agility: 3

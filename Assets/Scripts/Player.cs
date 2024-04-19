@@ -11,10 +11,12 @@ public class Player : MonoBehaviour
     [SerializeField] float walkSpeed;
 
     [SerializeField] Party playerParty;
+    [SerializeField] BattleInfo battleInfo;
 
     private void Start()
     {
         rb= GetComponent<Rigidbody2D>();
+        transform.position = battleInfo.position;
     }
 
     private void Update()

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EncounterZone : MonoBehaviour
 {
     [SerializeField] List<Party> PartyList;
+    [SerializeField] BattleInfo InfoTranfers;
 
     Party ChooseRandomParty()
     {
@@ -14,15 +15,20 @@ public class EncounterZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (PartyList.Count > 0)
+        var p = collision.GetComponent<Player>();
+
+        if (PartyList.Count > 0 && p)
         {
-            var p = collision.GetComponent<Player>().GetParty();
             var e = ChooseRandomParty();
-            var s = SceneManager.GetActiveScene().ToString();
+            var s = SceneManager.GetActiveScene().name;
 
-            Combat.OnCombat.Invoke(p, e, s);
+            InfoTranfers.playerParty = p.GetParty();
+            InfoTranfers.enemyParty = e;
+            InfoTranfers.sceneName = s;
+            InfoTranfers.position = p.transform.position;
 
-            
+            SceneManager.LoadSceneAsync("battle");
+
         }
     }
 }
