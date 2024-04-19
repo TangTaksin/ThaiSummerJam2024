@@ -2,29 +2,60 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rb2;
-    [SerializeField] private float speed = 5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb2 = GetComponent<Rigidbody2D>();
+    Rigidbody2D rb;
+    Animator animator;
 
+    Vector2 dir;
+
+    [SerializeField] float walkSpeed;
+    [SerializeField] Party playerParty;
+    [SerializeField] SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveY = Input.GetAxis("Vertical");
-
-        Vector2 movement = new Vector2(moveX, moveY);
-
-        movement.Normalize();
-
-        rb2.velocity = movement * speed;
-
+        Movement();
+        FlipSprite();
     }
+
+    public void OnMove(InputValue value)
+    {
+        dir = value.Get<Vector2>();
+        dir.Normalize();
+        animator.SetBool("IsWalking", dir.magnitude > 0);
+    }
+
+    void Movement()
+    {
+        rb.velocity = dir * walkSpeed;
+    }
+
+    void FlipSprite()
+    {
+        // If moving right and sprite is facing left, flip the sprite
+        if (dir.x > 0 && spriteRenderer.flipX)
+        {
+            spriteRenderer.flipX = false;
+        }
+        // If moving left and sprite is facing right, flip the sprite
+        else if (dir.x < 0 && !spriteRenderer.flipX)
+        {
+            spriteRenderer.flipX = true;
+        }
+    }
+
+    public Party GetParty()
+    {
+        return playerParty;
+    }
+
 }

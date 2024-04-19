@@ -16,13 +16,11 @@ public class EncounterZone : MonoBehaviour
     {
         if (PartyList.Count > 0)
         {
-            var p = collision.GetComponent<Player>().GetParty();
+            var p = collision.GetComponent<PlayerMove>().GetParty();
             var e = ChooseRandomParty();
             var s = SceneManager.GetActiveScene().ToString();
 
             Combat.OnCombat.Invoke(p, e, s);
-
-            
         }
     }
 }

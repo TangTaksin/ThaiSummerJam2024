@@ -45,11 +45,11 @@ MonoBehaviour:
   baseMeltingPoint: 0
   curhealth: 0
   curMeltingPoint: 0
-  baseVitality: 0
-  baseAttack: 0
-  baseDefence: 0
-  baseAgility: 0
-  baseLuck: 0
+  baseVitality: 10
+  baseAttack: 6
+  baseDefence: 15
+  baseAgility: 3
+  baseLuck: 2
   addedVitality: 0
   addedAttack: 0
   addedDefence: 0
@@ -63,6 +63,6 @@ MonoBehaviour:
   enemyTendancy: 0
   initSkillList:
   - {fileID: 11400000, guid: 27de311a04afd6645955efae58b26e40, type: 2}
-  portraits: {fileID: 0}
+  portraits: {fileID: 476897158, guid: d837cd966eadeb143bc10ff159e9e9c3, type: 3}
   animationSet: {fileID: 0}
   flipSprite: 0

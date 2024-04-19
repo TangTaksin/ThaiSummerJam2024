@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: EnemyPartyA
   m_EditorClassIdentifier: 
   charactersInParty:
-  - {fileID: 11400000, guid: 413c4fca33be91845a8a5cfd0c9a9e57, type: 2}
+  - {fileID: 11400000, guid: ed1101ab243739249a9634e24ac705ec, type: 2}
+  - {fileID: 11400000, guid: e23c4978e4c69f84ba11f42db5133797, type: 2}

@@ -16,4 +16,4 @@ MonoBehaviour:
   element: 4
   Power: 10
   meltPower: 0
-  turnCost: 5
+  turnCost: 3

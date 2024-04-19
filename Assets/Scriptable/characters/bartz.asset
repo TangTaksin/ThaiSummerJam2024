@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44651ea7ea5821a48a58aabc6bf08e77, type: 3}
   m_Name: bartz
   m_EditorClassIdentifier: 
-  charName: Bartz
+  charName: "\u0E1F\u0E23\u0E2D\u0E2A\u0E15\u0E4C"
   level: 1
   exp: 0
   sdPerLevel: 5
@@ -43,7 +43,7 @@ MonoBehaviour:
   elements: 04000000
   baseHealth: 50
   baseMeltingPoint: 150
-  curhealth: 44
+  curhealth: 26
   curMeltingPoint: 0
   baseVitality: 5
   baseAttack: 5

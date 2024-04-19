@@ -71,8 +71,6 @@ public class Combat : MonoBehaviour
         playerChoicePanel.SetActive(false);
 
 
-        //Debug Start
-        InitializeBattle(playerSide, enemySide, "lmao");
     }
 
     private void OnDisable()
@@ -163,7 +161,7 @@ public class Combat : MonoBehaviour
     {
 
         lastSceneBeforeFight = lastscene;
-        //SceneManager.LoadSceneAsync("battle");
+        SceneManager.LoadSceneAsync("battle");
 
         storedExp = 0;
 
@@ -204,7 +202,7 @@ public class Combat : MonoBehaviour
 
         var turnToSubtract = currentCombatant.GetOrder();
 
-        foreach(var c in combatantList)
+        foreach (var c in combatantList)
         {
             c.SetOrder(c.GetOrder() - (turnToSubtract - 1));
         }
@@ -263,6 +261,7 @@ public class Combat : MonoBehaviour
 
     public void ToMainActionMenu()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_UI_Cancel);
         curMenu = playermenu.main;
         EventSystem.current.SetSelectedGameObject(firstSelectMain);
 
@@ -278,6 +277,8 @@ public class Combat : MonoBehaviour
 
     void ReadSkillList()
     {
+
+
         var skillnumb = currentCombatant.initSkillList.Count;
 
         //Activate skill slot according to the number of skills
@@ -292,10 +293,12 @@ public class Combat : MonoBehaviour
             else
                 skillSlot[i].gameObject.SetActive(false);
         }
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_UI_Select);
     }
 
     public void ToSkillMenu()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_UI_Cancel);
         curMenu = playermenu.skill;
 
         currentCombatant.GetActor().PlayAnimation("idle_anim");
@@ -305,7 +308,7 @@ public class Combat : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(firstSelectSkill);
         SkillPanel.SetActive(true);
-        
+
         EnableSkillButton(true);
 
         ActiveMainButton(false);
@@ -317,10 +320,11 @@ public class Combat : MonoBehaviour
 
     public void ChooseSkill(int index)
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_UI_Confirm);
         selectedSkill = currentCombatant.initSkillList[index];
         currentCombatant.GetActor().PlayAnimation("ready_anim");
 
-        timeline.SetPreview(true ,1 + selectedSkill.turnCost);
+        timeline.SetPreview(true, 1 + selectedSkill.turnCost);
         ToTargetSelection();
     }
 
@@ -345,12 +349,13 @@ public class Combat : MonoBehaviour
         {
             if (ss.gameObject.activeSelf)
                 ss.MakeSelectable(_bool);
-                
+
         }
     }
 
     void ToTargetSelection()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_UI_Select);
         curMenu = playermenu.targetSelect;
 
         EnableSkillButton(false);
@@ -364,6 +369,7 @@ public class Combat : MonoBehaviour
 
     void PlayerSelectedTarget(CombatChar target)
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.SFX_UI_Select);
         timeline.SetPreview(false, 1);
         selectedChar = target;
 
@@ -435,7 +441,7 @@ public class Combat : MonoBehaviour
         var mp = selectedChar.GetStat().baseMeltingPoint;
 
         var htm = Mathf.CeilToInt(selectedChar.GetStat().baseMeltingPoint / 100);
-        var melt = Mathf.CeilToInt(mp /htm * eleModi);
+        var melt = Mathf.CeilToInt(mp / htm * eleModi);
 
         currentCombatant.GetActor().PlayAnimation("cast_anim");
 
@@ -446,6 +452,33 @@ public class Combat : MonoBehaviour
         damageNum.PopUpText(Mathf.Abs(dmg).ToString(), txtColor, cam.WorldToScreenPoint(selectedChar.transform.position));
 
         selectedChar.TakeDamage(Mathf.CeilToInt(dmg), melt * isEnemy.GetHashCode());
+        //Enemytakedamge must chcek elemtal
+
+
+        if (selectedSkill.element == element.fire)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx_FireAttack);
+
+        }
+        else if (selectedSkill.element == element.ice)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx_IceAttack);
+        }
+        else if (selectedSkill.element == element.water)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.sfx_WaterAttack);
+
+        }
+        else if (selectedSkill.element == element.wood)
+        {
+            //wood attack
+
+        }
+        else if (selectedSkill.element == element.none)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.hitSound);
+        }
+
 
         //Apply delay
         var delay = selectedSkill.turnCost;
@@ -470,7 +503,7 @@ public class Combat : MonoBehaviour
     bool playerLose = false;
     bool enemyLose = false;
 
-    void OnDown(CombatChar sender,int value)
+    void OnDown(CombatChar sender, int value)
     {
         var ss = sender.GetStat();
 
