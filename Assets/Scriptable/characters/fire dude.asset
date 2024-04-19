@@ -14,13 +14,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Fire Dide
   level: 1
-  baseHealth: 0
-  baseMeltingPoint: 0
-  curhealth: 0
+  exp: 50
+  sdPerLevel: 5
+  expCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  elements: 00000000
+  baseHealth: 990
+  baseMeltingPoint: 200
+  curhealth: 990
   curMeltingPoint: 0
-  vitality: 0
+  baseVitality: 99
+  baseAttack: 1
+  baseDefence: 10
+  baseAgility: 3
+  baseLuck: 1
+  addedVitality: 0
+  addedAttack: 0
+  addedDefence: 0
+  addedAgility: 0
+  addedLuck: 0
+  vitality: 99
   attack: 1
-  defence: 0
-  agility: 11
-  luck: 0
-  initSkillList: []
+  defence: 10
+  agility: 3
+  luck: 1
+  enemyTendancy: 0
+  initSkillList:
+  - {fileID: 11400000, guid: a9076407acd4a584aaca1b430c994496, type: 2}
+  portraits: {fileID: 21300000, guid: ce904d6eeea98fd4bbb329f50bab2931, type: 3}
+  animationSet: {fileID: 0}
+  flipSprite: 0

@@ -9,13 +9,20 @@ public class SkillUI : MonoBehaviour
     public TextMeshProUGUI nameTxt, powerTxt, turnTxt;
     Button _button;
 
-    private void Start()
+    private void OnEnable()
     {
         _button = GetComponent<Button>();
     }
 
-    public Button GetButton()
+    public void MakeSelectable(bool _bool)
     {
-        return _button;
+        _button.interactable = _bool;
+    }
+
+    public void SetSkillData(Skill skill)
+    {
+        nameTxt.text = skill.skillName;
+        powerTxt.text = skill.Power.ToString();
+        turnTxt.text = skill.turnCost.ToString();
     }
 }

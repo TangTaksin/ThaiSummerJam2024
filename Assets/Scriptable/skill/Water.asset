@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779860b9c52826c41b44c802ebaac275, type: 3}
-  m_Name: PlayerParty
+  m_Script: {fileID: 11500000, guid: e661658c3cd97f945a8da94851e67ed4, type: 3}
+  m_Name: Water
   m_EditorClassIdentifier: 
-  charactersInParty:
-  - {fileID: 11400000, guid: 6cfb243b3a56e58448771221444b4ae0, type: 2}
+  skillName: Water Gun
+  element: 1
+  Power: 10
+  meltPower: 0
+  turnCost: 5

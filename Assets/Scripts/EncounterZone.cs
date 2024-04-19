@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EncounterZone : MonoBehaviour
 {
@@ -17,8 +18,11 @@ public class EncounterZone : MonoBehaviour
         {
             var p = collision.GetComponent<Player>().GetParty();
             var e = ChooseRandomParty();
+            var s = SceneManager.GetActiveScene().ToString();
 
-            Combat.OnCombat.Invoke(p,e);
+            Combat.OnCombat.Invoke(p, e, s);
+
+            
         }
     }
 }

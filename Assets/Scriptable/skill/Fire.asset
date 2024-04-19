@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e661658c3cd97f945a8da94851e67ed4, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  skillName: Fire
-  skillPower: 10
+  skillName: Fire Punch
+  element: 0
+  Power: 10
+  meltPower: 0
   turnCost: 5
